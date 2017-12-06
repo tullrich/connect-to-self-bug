@@ -7,6 +7,7 @@ const MulticastDNS = require('libp2p-mdns')
 const SECIO = require('libp2p-secio')
 const PeerInfo = require('peer-info')
 const async = require('async')
+const multiaddr = require('multiaddr')
 const argv = require('yargs')
   .option('port', { default: 4043 })
 
@@ -28,7 +29,8 @@ var node;
 async.waterfall([
   (cb) => PeerInfo.create(cb),
   (myPeerInfo, cb) => {
-    myPeerInfo.multiaddrs.add('/ip4/0.0.0.0/tcp/' + argv.port);
+    let ma  = multiaddr('/ip4/0.0.0.0/tcp/' + argv.port).encapsulate('/ipfs/' + id.toB58String());
+    myPeerInfo.multiaddrs.add(ma);
     node = new Node(myPeerInfo, argv)
     node.start((err) => cb(err, myPeerInfo));
   }
