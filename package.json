@@ -16,7 +16,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "DEBUG=* node index.js"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC"

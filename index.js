@@ -29,15 +29,16 @@ var node;
 async.waterfall([
   (cb) => PeerInfo.create(cb),
   (myPeerInfo, cb) => {
-    console.log("PORT ", argv.port);
-    let ma  = multiaddr('/ip4/0.0.0.0/tcp/' + argv.port).encapsulate('/ipfs/' + myPeerInfo.id.toB58String());
+    let ma  = multiaddr('/ip4/0.0.0.0/tcp/' + argv.port);
     myPeerInfo.multiaddrs.add(ma);
     node = new Node(myPeerInfo, argv)
     node.start((err) => cb(err, myPeerInfo));
   }
 ], (err, myPeerInfo) => {
   if (err) { throw err }
+  let multiaddrs = myPeerInfo.multiaddrs.toArray().map((m) => m.toString());
   console.log("This Peer ID: ", myPeerInfo.id.toB58String());
+  console.log("Listening on addresses: \n", multiaddrs);
 
   node.on('peer:discovery', (peer) => {
     console.log('Discovered:', peer.id.toB58String())
