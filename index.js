@@ -9,7 +9,7 @@ const PeerInfo = require('peer-info')
 const async = require('async')
 const multiaddr = require('multiaddr')
 const argv = require('yargs')
-  .option('port', { default: 4043 })
+  .option('port', { default: 4043 }).argv
 
 class Node extends libp2p {
   constructor (peerInfo, config) {
@@ -29,7 +29,8 @@ var node;
 async.waterfall([
   (cb) => PeerInfo.create(cb),
   (myPeerInfo, cb) => {
-    let ma  = multiaddr('/ip4/0.0.0.0/tcp/' + argv.port).encapsulate('/ipfs/' + id.toB58String());
+    console.log("PORT ", argv.port);
+    let ma  = multiaddr('/ip4/0.0.0.0/tcp/' + argv.port).encapsulate('/ipfs/' + myPeerInfo.id.toB58String());
     myPeerInfo.multiaddrs.add(ma);
     node = new Node(myPeerInfo, argv)
     node.start((err) => cb(err, myPeerInfo));
