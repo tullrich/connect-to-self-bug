@@ -1,0 +1,178 @@
+
+> connect-to-self-bug@1.0.0 start /home/tim/projects/work/BMT/connect-to-self-bug
+> DEBUG=* node index.js
+
+2017-12-06T18:16:59.024Z libp2p:swarm:dialer create: 8 peer limit, 30000 dial timeout
+2017-12-06T18:16:59.034Z libp2p:swarm:transport adding TCP
+2017-12-06T18:16:59.042Z libp2p:tcp:listen Listening on 4043 0.0.0.0
+This Peer ID:  Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o
+Listening on addresses: 
+ [ '/ip4/127.0.0.1/tcp/4043/ipfs/Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o',
+  '/ip4/10.20.0.123/tcp/4043/ipfs/Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o' ]
+2017-12-06T18:17:08.332Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:08.334Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:08.335Z libp2p:swarm:dial dialing transport TCP
+2017-12-06T18:17:08.335Z libp2p:swarm:transport dialing TCP [ '/ip4/127.0.0.1/tcp/4043', '/ip4/10.20.0.109/tcp/4043' ]
+2017-12-06T18:17:08.335Z libp2p:swarm:dialer dialMany:start
+2017-12-06T18:17:08.336Z libp2p:swarm:dialer dialSingle: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t:/ip4/127.0.0.1/tcp/4043
+2017-12-06T18:17:08.337Z libp2p:swarm:dialer dialSingle: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t:/ip4/10.20.0.109/tcp/4043
+2017-12-06T18:17:08.338Z libp2p:swarm:dialer:queue work
+2017-12-06T18:17:08.339Z libp2p:tcp:dial Connecting to 4043 127.0.0.1
+2017-12-06T18:17:08.341Z libp2p:swarm:dialer:queue work
+2017-12-06T18:17:08.342Z libp2p:tcp:dial Connecting to 4043 10.20.0.109
+2017-12-06T18:17:08.344Z libp2p:tcp:listen new connection /ip4/127.0.0.1/tcp/40884
+2017-12-06T18:17:08.345Z mss:listener	 (1fcv4d) adding handler: /secio/1.0.0
+2017-12-06T18:17:08.345Z mss:listener	 (1fcv4d) listener handle conn
+2017-12-06T18:17:08.346Z mss:listener	 (1fcv4d) writing multicodec: /multistream/1.0.0
+2017-12-06T18:17:08.350Z libp2p:swarm:dialer:queue work:success
+2017-12-06T18:17:08.352Z libp2p:swarm:dialer:queue work:cancel
+2017-12-06T18:17:08.352Z libp2p:swarm:dialer dialMany:success
+2017-12-06T18:17:08.353Z mss:dialer	 (73vmpv) dialer handle conn
+2017-12-06T18:17:08.353Z mss:dialer	 (73vmpv) writing multicodec: /multistream/1.0.0
+2017-12-06T18:17:08.354Z mss:dialer	 (73vmpv) received ack: /multistream/1.0.0
+2017-12-06T18:17:08.354Z mss:dialer	 (73vmpv) handshake success
+2017-12-06T18:17:08.354Z libp2p:swarm:dial selecting crypto: /secio/1.0.0
+2017-12-06T18:17:08.354Z mss:dialer	 (73vmpv) dialer select /secio/1.0.0
+2017-12-06T18:17:08.354Z mss:dialer	 (73vmpv) writing multicodec: /secio/1.0.0
+2017-12-06T18:17:08.356Z mss:listener	 (1fcv4d) received ack: /multistream/1.0.0
+2017-12-06T18:17:08.357Z mss:listener	 (1fcv4d) received:
+2017-12-06T18:17:08.357Z mss:listener	 (1fcv4d) send ack back of: /secio/1.0.0
+2017-12-06T18:17:08.359Z libp2p:secio 1. propose - start
+2017-12-06T18:17:08.359Z libp2p:secio 1. propose - writing proposal
+2017-12-06T18:17:08.366Z mss:listener	 (49vxux) adding handler: /mplex/6.7.0
+2017-12-06T18:17:08.366Z mss:listener	 (49vxux) adding handler: /ipfs/id/1.0.0
+2017-12-06T18:17:08.367Z mss:listener	 (49vxux) adding handler: /secio/1.0.0
+2017-12-06T18:17:08.367Z mss:listener	 (49vxux) adding handler: /ipfs/ping/1.0.0
+2017-12-06T18:17:08.367Z mss:listener	 (49vxux) listener handle conn
+2017-12-06T18:17:08.367Z mss:listener	 (49vxux) writing multicodec: /multistream/1.0.0
+2017-12-06T18:17:08.369Z mss:dialer	 (73vmpv) received ack: /secio/1.0.0
+2017-12-06T18:17:08.369Z libp2p:secio 1. propose - start
+2017-12-06T18:17:08.369Z libp2p:secio 1. propose - writing proposal
+2017-12-06T18:17:08.370Z mss:dialer	 (6kok1q) dialer handle conn
+2017-12-06T18:17:08.370Z mss:dialer	 (6kok1q) writing multicodec: /multistream/1.0.0
+2017-12-06T18:17:08.371Z libp2p:secio 1. propose - reading proposal <Buffer 0a 10 8c 1d b2 a5 ca b6 6d 4f a1 51 b4 78 7a b3 85 78 12 ab 02 08 00 12 a6 02 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 ... >
+2017-12-06T18:17:08.372Z libp2p:secio 1.1 identify
+2017-12-06T18:17:08.378Z libp2p:secio 1. propose - reading proposal <Buffer 0a 10 1c f4 0c bb 7a 21 a9 ed 27 af 20 97 89 cb 18 8f 12 ab 02 08 00 12 a6 02 30 82 01 22 30 0d 06 09 2a 86 48 86 f7 0d 01 01 01 05 00 03 82 01 0f 00 ... >
+2017-12-06T18:17:08.378Z libp2p:secio 1.1 identify
+2017-12-06T18:17:08.379Z libp2p:secio 1.1 identify - Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o - identified remote peer as Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o
+2017-12-06T18:17:08.380Z libp2p:secio 1.2 selection
+2017-12-06T18:17:08.380Z libp2p:secio 1.1 identify - Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o - identified remote peer as Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o
+2017-12-06T18:17:08.381Z libp2p:secio 1.2 selection
+2017-12-06T18:17:08.382Z libp2p:secio 1. propose - finish
+2017-12-06T18:17:08.382Z libp2p:secio 2. exchange - start
+2017-12-06T18:17:08.382Z libp2p:secio 2. exchange - writing exchange
+2017-12-06T18:17:08.383Z libp2p:secio 1. propose - finish
+2017-12-06T18:17:08.383Z libp2p:secio 2. exchange - start
+2017-12-06T18:17:08.383Z libp2p:secio 2. exchange - writing exchange
+2017-12-06T18:17:08.404Z libp2p:secio 2. exchange - reading exchange
+2017-12-06T18:17:08.404Z libp2p:secio 2.1. verify
+2017-12-06T18:17:08.405Z libp2p:secio 2. exchange - reading exchange
+2017-12-06T18:17:08.405Z libp2p:secio 2.1. verify
+2017-12-06T18:17:08.406Z libp2p:secio 2.1. verify - signature verified
+2017-12-06T18:17:08.406Z libp2p:secio 2.2. keys
+2017-12-06T18:17:08.409Z libp2p:secio 2.1. verify - signature verified
+2017-12-06T18:17:08.409Z libp2p:secio 2.2. keys
+2017-12-06T18:17:08.413Z libp2p:secio 2.3. mac + cipher
+2017-12-06T18:17:08.414Z libp2p:secio 2. exchange - finish
+2017-12-06T18:17:08.414Z libp2p:secio 3. finish - start
+2017-12-06T18:17:08.416Z libp2p:secio 2.3. mac + cipher
+2017-12-06T18:17:08.416Z libp2p:secio 2. exchange - finish
+2017-12-06T18:17:08.416Z libp2p:secio 3. finish - start
+2017-12-06T18:17:08.418Z libp2p:secio 3. finish - finish
+2017-12-06T18:17:08.418Z libp2p:secio 3. finish - finish
+2017-12-06T18:17:08.418Z mss:listener	 (49vxux) received ack: /multistream/1.0.0
+2017-12-06T18:17:08.419Z mss:dialer	 (6kok1q) received ack: /multistream/1.0.0
+2017-12-06T18:17:08.419Z mss:dialer	 (6kok1q) handshake success
+2017-12-06T18:17:08.419Z libp2p:swarm:dial selecting /mplex/6.7.0
+2017-12-06T18:17:08.419Z mss:dialer	 (6kok1q) dialer select /mplex/6.7.0
+2017-12-06T18:17:08.419Z mss:dialer	 (6kok1q) writing multicodec: /mplex/6.7.0
+2017-12-06T18:17:08.420Z mss:listener	 (49vxux) received:
+2017-12-06T18:17:08.420Z mss:listener	 (49vxux) send ack back of: /mplex/6.7.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 construction
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 createStream: 1 1 { halfOpen: true, initiator: false }
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 open, halfOpen: true
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _addChannel 1
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 open: 1
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _send 8 0
+2017-12-06T18:17:08.427Z mss:dialer	 (8q9i47) dialer handle conn
+2017-12-06T18:17:08.427Z mss:dialer	 (8q9i47) writing multicodec: /multistream/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 write:  20
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _send 10 20
+2017-12-06T18:17:08.430Z mss:dialer	 (6kok1q) received ack: /mplex/6.7.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 construction
+Connection established to: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _push 0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 open 1
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 open name 1
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 open, halfOpen: true
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _addChannel 1
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 open: 1
+2017-12-06T18:17:08.474Z mss:listener	 (7rx34k) adding handler: /mplex/6.7.0
+2017-12-06T18:17:08.474Z mss:listener	 (7rx34k) adding handler: /ipfs/id/1.0.0
+2017-12-06T18:17:08.474Z mss:listener	 (7rx34k) adding handler: /secio/1.0.0
+2017-12-06T18:17:08.474Z mss:listener	 (7rx34k) adding handler: /ipfs/ping/1.0.0
+2017-12-06T18:17:08.474Z mss:listener	 (7rx34k) listener handle conn
+2017-12-06T18:17:08.475Z mss:listener	 (7rx34k) writing multicodec: /multistream/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 write:  20
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _send 9 20
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 20
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _push 20
+2017-12-06T18:17:08.477Z mss:listener	 (7rx34k) received ack: /multistream/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 20
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _push 20
+2017-12-06T18:17:08.518Z mss:dialer	 (8q9i47) received ack: /multistream/1.0.0
+2017-12-06T18:17:08.518Z mss:dialer	 (8q9i47) handshake success
+2017-12-06T18:17:08.518Z mss:dialer	 (8q9i47) dialer select /ipfs/id/1.0.0
+2017-12-06T18:17:08.518Z mss:dialer	 (8q9i47) writing multicodec: /ipfs/id/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 write:  16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _send 10 16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _push 16
+2017-12-06T18:17:08.561Z mss:listener	 (7rx34k) received:
+2017-12-06T18:17:08.562Z mss:listener	 (7rx34k) send ack back of: /ipfs/id/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 write:  16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _send 9 16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 write:  424
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _send 9 424
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _send 11 0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 16
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _push 16
+2017-12-06T18:17:08.608Z mss:dialer	 (8q9i47) received ack: /ipfs/id/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 3
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 424
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _push 424
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 _destroy:local
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _send 14 0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _remove channel 1
+2017-12-06T18:17:08.631Z libp2p:tcp:listen new connection /ip4/10.20.0.109/tcp/50012
+2017-12-06T18:17:08.631Z mss:listener	 (8nx7rk) adding handler: /secio/1.0.0
+2017-12-06T18:17:08.632Z mss:listener	 (8nx7rk) listener handle conn
+2017-12-06T18:17:08.632Z mss:listener	 (8nx7rk) writing multicodec: /multistream/1.0.0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:1023 _push 0
+Connection established to: Qmc5Fvsx1AwTVRCnZJqFarT9yJGBHiR2NqqpFR2yGWwd1o
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _write 2
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _push 0
+Wed, 06 Dec 2017 18:17:08 GMT mplex:channel:1 _destroy:remote
+Wed, 06 Dec 2017 18:17:08 GMT mplex:main:11283 _remove channel 1
+2017-12-06T18:17:09.431Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:09.431Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:18.335Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:18.336Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:19.262Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:19.263Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:28.337Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:28.337Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:29.096Z libp2p:mdns peer found - QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+Discovered: QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
+2017-12-06T18:17:29.097Z libp2p:swarm:dial dialing QmXQhdGGFJbGcQmUR4o4j4meVNR97u1GWaJt1PpfraVz1t
